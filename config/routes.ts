@@ -15,13 +15,13 @@
   },
   {
     path: '/welcome',
-    name: 'welcome',
+    name: '首页',
     icon: 'smile',
     component: './Welcome',
   },
   {
     path: '/admin',
-    name: 'admin',
+    name: '没用',
     icon: 'crown',
     access: 'canAdmin',
     routes: [
@@ -37,10 +37,16 @@
     ],
   },
   {
-    name: 'list.table-list',
+    name: '文章',
     icon: 'table',
     path: '/list',
     component: './TableList',
+  },
+  {
+    name: '网站设置',
+    icon: 'setting',
+    path: '/setting',
+    component: './Welcome',
   },
   {
     path: '/',
