@@ -33,27 +33,47 @@ declare namespace API {
     pageSize?: number;
   };
 
-  type RuleListItem = {
-    key?: number;
-    disabled?: boolean;
-    href?: string;
-    avatar?: string;
+  type Article = {
+    id?: number;
+    gmtCreate?: string;
+    gmtModified?: string;
     name?: string;
-    owner?: string;
-    desc?: string;
-    callNo?: number;
+    type?: number;
+    viewCnt?: number;
+    startCnt?: number;
+    commentCnt?: number;
+    description?: string;
     status?: number;
-    updatedAt?: string;
-    createdAt?: string;
-    progress?: number;
   };
 
-  type RuleList = {
-    data?: RuleListItem[];
+  type ArticleList = {
+    data?: Article[];
     /** 列表的内容总数 */
     total?: number;
     success?: boolean;
   };
+
+  // type RuleListItem = {
+  //   key?: number;
+  //   disabled?: boolean;
+  //   href?: string;
+  //   avatar?: string;
+  //   name?: string;
+  //   owner?: string;
+  //   desc?: string;
+  //   callNo?: number;
+  //   status?: number;
+  //   updatedAt?: string;
+  //   createdAt?: string;
+  //   progress?: number;
+  // };
+
+  // type RuleList = {
+  //   data?: RuleListItem[];
+  //   /** 列表的内容总数 */
+  //   total?: number;
+  //   success?: boolean;
+  // };
 
   type LoginParams = {
     username?: string;

@@ -1,13 +1,8 @@
 import { GithubOutlined } from '@ant-design/icons';
 import { DefaultFooter } from '@ant-design/pro-components';
-import { useIntl } from 'umi';
 
 const Footer: React.FC = () => {
-  const intl = useIntl();
-  const defaultMessage = intl.formatMessage({
-    id: 'app.copyright.produced',
-    defaultMessage: 'Ken-Chy129',
-  });
+  const defaultMessage = 'Ken-Chy129';
 
   const currentYear = new Date().getFullYear();
 

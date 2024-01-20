@@ -1,8 +1,8 @@
 import { PageContainer } from '@ant-design/pro-components';
 import { Alert, Card, Typography } from 'antd';
 import React from 'react';
-import { FormattedMessage, useIntl } from 'umi';
 import styles from './Welcome.less';
+import { HeartTwoTone, SmileTwoTone } from '@ant-design/icons';
 
 const CodePreview: React.FC = ({ children }) => (
   <pre className={styles.pre}>
@@ -13,16 +13,11 @@ const CodePreview: React.FC = ({ children }) => (
 );
 
 const Welcome: React.FC = () => {
-  const intl = useIntl();
-
   return (
     <PageContainer>
       <Card>
         <Alert
-          message={intl.formatMessage({
-            id: 'pages.welcome.alertMessage',
-            defaultMessage: 'Faster and stronger heavy-duty components have been released.',
-          })}
+          message="也许你定然都发现，我有很多未达完美事情"
           type="success"
           showIcon
           banner
@@ -37,10 +32,13 @@ const Welcome: React.FC = () => {
             rel="noopener noreferrer"
             target="__blank"
           >
-            <FormattedMessage id="pages.welcome.link" defaultMessage="Welcome" />
+            欢迎
           </a>
         </Typography.Text>
         <CodePreview>yarn add @ant-design/pro-components</CodePreview>
+        <Typography.Title level={2} style={{ textAlign: 'center' }}>
+          <SmileTwoTone /> Ant Design Pro <HeartTwoTone twoToneColor="#eb2f96" /> You
+        </Typography.Title>
       </Card>
     </PageContainer>
   );
