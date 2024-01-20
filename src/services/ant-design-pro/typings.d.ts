@@ -25,7 +25,6 @@ declare namespace API {
 
   type LoginResult = {
     status?: string;
-    type?: string;
     currentAuthority?: string;
   };
 
@@ -56,16 +55,10 @@ declare namespace API {
     success?: boolean;
   };
 
-  type FakeCaptcha = {
-    code?: number;
-    status?: string;
-  };
-
   type LoginParams = {
     username?: string;
     password?: string;
     autoLogin?: boolean;
-    type?: string;
   };
 
   type ErrorResponse = {
